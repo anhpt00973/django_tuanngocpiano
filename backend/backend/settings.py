@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-(ed-3y^fd29*38=6-kt27q2(^54zh0=z-nu)hg2ztl*w$3en8="
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]  # tạm thời khi demo
 
 
 # Application definition
@@ -120,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 CORS_ALLOW_ALL_ORIGINS = True
 MEDIA_URL = "/media/"
