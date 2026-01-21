@@ -24,11 +24,6 @@ class PianoSerializer(serializers.ModelSerializer):
     brand = BrandSerializer(read_only=True)
     category = CategorySerializer(read_only=True)
     images = PianoImageSerializer(many=True, read_only=True)
-    description = serializers.SerializerMethodField()
-
-    def get_description(self, obj):
-        # Trả về HTML raw từ RichTextField, không escape
-        return obj.description
 
     class Meta:
         model = Piano
