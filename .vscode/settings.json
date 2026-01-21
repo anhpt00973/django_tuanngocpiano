@@ -1,0 +1,23 @@
+{
+  // Python formatting với Black
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  // Cài đặt Black
+  "black-formatter.args": [
+    "--line-length=88"
+  ],
+  // Cài đặt isort (sắp xếp imports)
+  "isort.args": [
+    "--profile=black",
+    "--line-length=88"
+  ],
+  // Tự động format khi paste
+  "editor.formatOnPaste": true,
+  // Tự động format khi type (tùy chọn)
+  "editor.formatOnType": false
+}
